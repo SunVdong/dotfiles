@@ -1,0 +1,49 @@
+[alias]
+	lg = log --graph --pretty=oneline --abbrev-commit
+	st = status
+	ck = checkout
+	br = branch
+	llg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	merge-sq = merge --squash
+	dt = difftool
+    mt = mergetool
+[core]
+	ignorecase = false
+	quotepath = false
+	autocrlf = input
+[i18n]
+	commitEncoding = utf-8
+	logOutputEncoding = utf-8
+[gui]
+	encoding = utf-8
+[i18n "commit"]
+	encoding = utf-8
+[user]
+	name = sunvdong
+	email = sunvdong@qq.com
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[pull]
+	ff = only
+################################
+# Diff with Beyond Compare
+################################
+[diff]
+    tool = bc
+[difftool]
+    prompt = false
+[difftool "bc"]
+    cmd = "\"D:/Program Files/Beyond_Compare/Beyond_Compare_5.1.0.31016_Green_64Bit/BCompare/BCompare.exe\" \"$LOCAL\" \"$REMOTE\""
+################################
+# Merge with Beyond Compare
+################################
+[merge]
+    tool = bc
+[mergetool]
+    prompt = false
+[mergetool "bc"]
+    cmd = "\"D:/Program Files/Beyond_Compare/Beyond_Compare_5.1.0.31016_Green_64Bit/BCompare/BCompare.exe\" \"$LOCAL\" \"$REMOTE\" \"$BASE\" \"$MERGED\""
+    trustExitCode = true
