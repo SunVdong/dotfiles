@@ -1,0 +1,4 @@
+" 主文件
+source ~/.vim/config/basic.vim
+source ~/.vim/config/keymaps.vim
+source ~/.vim/config/plugins.vim
