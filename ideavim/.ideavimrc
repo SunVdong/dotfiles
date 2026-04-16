@@ -9,7 +9,7 @@ set clipboard+=unnamedplus
 
 set ttimeout
 set ttimeoutlen=50
-inoremap jj <Esc>
+inoremap jk <Esc>
 
 
 " insert 模式下快速移动
